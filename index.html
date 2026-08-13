@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery | CodeAlpha Internship | Pro2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Image Gallery</h1>
+    <p class="subtitle">A collection of nature, city, and animal photography</p>
+  </header>
+
+  <nav class="filter-bar" aria-label="Filter gallery by category">
+    <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+    <button class="filter-btn" type="button" data-filter="nature" aria-pressed="false">Nature</button>
+    <button class="filter-btn" type="button" data-filter="city" aria-pressed="false">City</button>
+    <button class="filter-btn" type="button" data-filter="animals" aria-pressed="false">Animals</button>
+  </nav>
+
+  <main class="gallery-grid" id="galleryGrid">
+
+    <button class="gallery-item" type="button" data-category="nature">
+      <img class="gallery-img" src="collections/nature1.webp" alt="Misty mountain range at sunrise">
+      <span class="gallery-overlay"><span class="gallery-tag">Nature</span></span>
+    </button>
+
+    <button class="gallery-item" type="button" data-category="nature">
+      <img class="gallery-img" src="collections/nature2.avif" alt="Sunlight through a dense forest canopy">
+      <span class="gallery-overlay"><span class="gallery-tag">Nature</span></span>
+    </button>
+
+    <button class="gallery-item" type="button" data-category="nature">
+      <img class="gallery-img" src="collections/nature3.jpeg" alt="Calm lake surrounded by pine trees">
+      <span class="gallery-overlay"><span class="gallery-tag">Nature</span></span>
+    </button>
+
+    <button class="gallery-item" type="button" data-category="city">
+      <img class="gallery-img" src="collections/images (1).jpeg" alt="City skyline at dusk">
+      <span class="gallery-overlay"><span class="gallery-tag">City</span></span>
+    </button>
+
+    <button class="gallery-item" type="button" data-category="city">
+      <img class="gallery-img" src="collections/images (2).jpeg" alt="Busy pedestrian crossing in a downtown district">
+      <span class="gallery-overlay"><span class="gallery-tag">City</span></span>
+    </button>
+
+    <button class="gallery-item" type="button" data-category="city">
+      <img class="gallery-img" src="collections/images (3).jpeg" alt="Row of modern glass office buildings">
+      <span class="gallery-overlay"><span class="gallery-tag">City</span></span>
+    </button>
+
+    <button class="gallery-item" type="button" data-category="animals">
+      <img class="gallery-img" src="collections/images (4).jpeg" alt="Red fox standing in a snowy field">
+      <span class="gallery-overlay"><span class="gallery-tag">Animals</span></span>
+    </button>
+
+    <button class="gallery-item" type="button" data-category="animals">
+      <img class="gallery-img" src="collections/images (5).jpeg" alt="Elephant walking across an open savanna">
+      <span class="gallery-overlay"><span class="gallery-tag">Animals</span></span>
+    </button>
+
+    <button class="gallery-item" type="button" data-category="animals">
+      <img class="gallery-img" src="collections/images (6).jpeg" alt="Owl perched on a branch at night">
+      <span class="gallery-overlay"><span class="gallery-tag">Animals</span></span>
+    </button>
+
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Close image viewer">&times;</button>
+
+    <div class="lightbox-content">
+      <button class="lightbox-nav lightbox-prev" type="button" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+
+      <div class="lightbox-image-wrap">
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+        <p class="lightbox-placeholder-text" id="lightboxPlaceholder" hidden>Image not added yet</p>
+      </div>
+
+      <button class="lightbox-nav lightbox-next" type="button" id="lightboxNext" aria-label="Next image">&#8250;</button>
+    </div>
+
+    <p class="lightbox-counter" id="lightboxCounter"></p>
+  </div>
+
+  <footer class="site-footer">
+    <p>Built for the CodeAlpha Web Development Internship</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
